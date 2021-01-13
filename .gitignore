@@ -1,2 +1,5 @@
 *.jpg
 !front_end\**\*.jpg
+
+*.jpeg
+!front_end\**\.jpeg
