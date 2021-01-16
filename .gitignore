@@ -1,3 +1,7 @@
+/client/node_modules/*
+/api/__pycache__
+.DS_Store
+
 *.jpg
 !front_end\**\*.jpg
 
