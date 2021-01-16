@@ -1,6 +1,9 @@
-/client/node_modules/*
+/node_modules/*
 /api/__pycache__
 .DS_Store
+.eslintcache
+yarn-error.log
+yarn.lock
 
 *.jpg
 !front_end\**\*.jpg
