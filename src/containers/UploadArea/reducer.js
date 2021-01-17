@@ -2,17 +2,21 @@ import { createReducer } from 'reduxsauce'
 import { uploadAreaTypes } from "./actions"
 
 export const INITIAL_STATE = {
-	test: "test"
+	loading: false,
+	image: null
 }
 
-export const test = (state = INITIAL_STATE, action) => {
-	console.log("test")
+export const uploadImageSuccessReducer = (state = INITIAL_STATE, action) => {
+	return state
+}
 
+export const uploadImageErrorReducer = (state = INITIAL_STATE, action) => {
 	return state
 }
 
 export const HANDLERS = {
-	[uploadAreaTypes.TEST]: test
+	[uploadAreaTypes.UPLOAD_IMAGE_SUCCESS]: uploadImageSuccessReducer,
+	[uploadAreaTypes.UPLOAD_IMAGE_ERROR]: uploadImageErrorReducer
 }
 
 export default createReducer(INITIAL_STATE, HANDLERS)

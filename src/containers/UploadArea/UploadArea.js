@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef } from "react"
 import { useDispatch } from "react-redux"
 
 import uploadAreaActions from "./actions"
@@ -12,10 +12,6 @@ function UploadArea() {
 	const formRef = useRef(null)
 
 	const dispatch = useDispatch()
-
-	useEffect(() => {
-		dispatch(uploadAreaActions.test())
-	}, [])
 
 	const handleUploadClick = () => {
 		inputRef.current.click()
@@ -33,7 +29,11 @@ function UploadArea() {
 			const fileReader = new FileReader()
 
 			fileReader.onprogress = event => handleProgress(event)
-			fileReader.onload = event => handlePreview(event.target.result)
+			fileReader.onload = event => {
+				handlePreview(event.target.result)
+				dispatch(uploadAreaActions.uploadImage(files[0]))
+			}
+
 			fileReader.readAsDataURL(files[0])
 		}
 	}

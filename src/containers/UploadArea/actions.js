@@ -1,7 +1,9 @@
 import { createActions } from 'reduxsauce'
 
 const { Types, Creators } = createActions({
-	test: []
+	uploadImage: ["image"],
+	uploadImageSuccess: [],
+	uploadImageError: []
 })
 
 export { Types as uploadAreaTypes }
