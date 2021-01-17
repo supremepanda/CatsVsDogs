@@ -7,10 +7,10 @@ import Footer from "../Footer"
 import * as S from "./style"
 
 function App() {
-  useEffect(() => {
-    fetch("/api/test").then(res => res.json())
-      .then(res => console.log({ res }))
-  }, [])
+  // useEffect(() => {
+  //   fetch("/api/test").then(res => res.json())
+  //     .then(res => console.log({ res }))
+  // }, [])
 
   return (
     <>

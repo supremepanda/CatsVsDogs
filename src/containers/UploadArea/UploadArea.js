@@ -1,4 +1,7 @@
-import React, { useRef } from "react"
+import React, { useRef, useEffect } from "react"
+import { useDispatch } from "react-redux"
+
+import uploadAreaActions from "./actions"
 
 import * as S from "./style"
 
@@ -7,6 +10,12 @@ function UploadArea() {
 	const previewRef = useRef(null)
 	const previewWrapperRef = useRef(null)
 	const formRef = useRef(null)
+
+	const dispatch = useDispatch()
+
+	useEffect(() => {
+		dispatch(uploadAreaActions.test())
+	}, [])
 
 	const handleUploadClick = () => {
 		inputRef.current.click()
