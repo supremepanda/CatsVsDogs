@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS
 
 import sys
-sys.path.insert(1, 'back_end/project')
+sys.path.insert(1, 'backend')
 
 import predict
 
