@@ -1,24 +1,26 @@
-import { takeEvery, call, put } from "redux-saga/effects"
-import { uploadAreaTypes } from "./actions"
+import { takeLatest, call, put, delay } from "redux-saga/effects"
+import uploadAreaActions, { uploadAreaTypes } from "./actions"
 
 const BASE_URL = "http://127.0.0.1:5000"
 
-function callPredictImage(image) {
-	fetch(`${BASE_URL}/api/predict-image`, {
+async function callPredictImage(image) {
+	const { type } = await fetch(`${BASE_URL}/api/predict-image`, {
 		method: 'POST',
 		body: image
-	  })
-		.then(res => res.json())
-		.then(res => console.log(res))
+	  }).then(res => res.json())
+
+	return type
 }
 
 export function* uploadImageSaga({ image }) {
 	const form = new FormData()
 	form.append("image", image)
 
-	yield call(callPredictImage, form)
+	const imageType = yield call(callPredictImage, form)
+	yield delay(1000)
+	yield put(uploadAreaActions.uploadImageSuccess(imageType))
 }
 
 export default function* uploadAreaSaga() {
-	yield takeEvery(uploadAreaTypes.UPLOAD_IMAGE, uploadImageSaga)
+	yield takeLatest(uploadAreaTypes.UPLOAD_IMAGE, uploadImageSaga)
 }

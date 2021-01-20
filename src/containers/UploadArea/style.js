@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const UploadArea = styled.main`
 	position: absolute;
@@ -43,6 +43,7 @@ const Button = styled.button`
 
 const PreviewWrapper = styled.div`
 	visibility: hidden;
+	position: relative;
 	opacity: 0;
 	display: flex;
 	align-items: center;
@@ -63,6 +64,22 @@ const Preview = styled.img`
 	max-width: 100%;
 	height: 100%;
 	object-fit: cover;
+	filter: blur(${({ isSet }) => isSet ? "3px" : 0})
 `
 
-export { UploadArea, UploadForm, Upload, Button, PreviewWrapper, Preview }
+const ResultWrapper = styled.div`
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+`
+
+const Result = styled.h3`
+	transition: .3s all ease-in-out;
+	color: var(--white);
+`
+
+export { UploadArea, UploadForm, Upload, Button, PreviewWrapper, Preview, ResultWrapper, Result }

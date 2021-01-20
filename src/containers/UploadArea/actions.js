@@ -2,7 +2,7 @@ import { createActions } from 'reduxsauce'
 
 const { Types, Creators } = createActions({
 	uploadImage: ["image"],
-	uploadImageSuccess: [],
+	uploadImageSuccess: ["imageType"],
 	uploadImageError: []
 })
 
