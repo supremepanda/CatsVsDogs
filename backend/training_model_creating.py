@@ -6,12 +6,13 @@ import file_management
 
 CATS = 0
 DOGS = 1
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # It stores test data to get accuracy of our Support Vector Classifier
 def pick_test_data():
 
     # Path of test data
-    directory = r'D:\CatsVsDogs\back_end\project\testdata'
+    directory = f'{ROOT_DIR}/testdata'
 
     # Categories
     categories = [CATS, DOGS]
@@ -51,7 +52,7 @@ def pick_test_data():
 # It stores data as pickle filetype.
 def pick_all_data():
     # The path of the images directory
-    directory = r'D:\CatsVsDogs\back_end\project\dataset'
+    directory = f'{ROOT_DIR}/dataset'
 
     # The array of categories that these are 'cats' and 'dogs'
     categories = [CATS, DOGS]

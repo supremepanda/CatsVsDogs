@@ -1,9 +1,14 @@
 import pickle
+import os
+
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_file(filename):
     
+    print(os.listdir())
+
     # Opening the file
-    pick = open(filename, 'rb')
+    pick = open(f'{ROOT_DIR}/{filename}', 'rb')
 
     # Storing the file data with temporary local variable
     model = pickle.load(pick)
@@ -17,7 +22,7 @@ def load_file(filename):
 def save_file(filename, data):
 
     # Opening the file
-    pick = open(filename, 'wb')
+    pick = open(f'{ROOT_DIR}/{filename}', 'wb')
 
     # Saving the file
     pickle.dump(data, pick)

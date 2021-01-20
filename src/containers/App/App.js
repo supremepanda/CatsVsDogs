@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 import Navigation from "../Navigation"
 import Header from "../Header"
 import Footer from "../Footer"
@@ -7,11 +5,6 @@ import Footer from "../Footer"
 import * as S from "./style"
 
 function App() {
-  useEffect(() => {
-    fetch("/api/test").then(res => res.json())
-      .then(res => console.log({ res }))
-  }, [])
-
   return (
     <>
       <S.ResetStyles />
