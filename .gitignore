@@ -5,9 +5,3 @@
 .eslintcache
 yarn-error.log
 yarn.lock
-
-*.jpg
-!front_end\**\*.jpg
-
-*.jpeg
-!front_end\**\.jpeg
