@@ -12,8 +12,7 @@ CORS(app)
 @app.route("/api/predict-image", methods=['POST'])
 def predictImage():
 	file = request.files['image']
-	response = { "message": "test" }
+	response = { "type": predict.predict(file) }
 
 	return response
 
-#print(predict.predict('back_end\cat2.jpg'))
