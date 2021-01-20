@@ -1,4 +1,4 @@
-import { takeLatest, call, put, delay } from "redux-saga/effects"
+import { takeLatest, call, put } from "redux-saga/effects"
 import uploadAreaActions, { uploadAreaTypes } from "./actions"
 
 const BASE_URL = "http://127.0.0.1:5000"
@@ -17,7 +17,6 @@ export function* uploadImageSaga({ image }) {
 	form.append("image", image)
 
 	const imageType = yield call(callPredictImage, form)
-	yield delay(1000)
 	yield put(uploadAreaActions.uploadImageSuccess(imageType))
 }
 
