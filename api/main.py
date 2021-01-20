@@ -16,3 +16,4 @@ def predictImage():
 
 	return response
 
+print(predict.predict('D:/final/CatsVsDogs/backend/dataset/cats/cat.1.jpg'))
