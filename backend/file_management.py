@@ -13,7 +13,7 @@ def check_sav_file():
 
 # It unzip the 'model.zip'
 def unzip_model():
-    with zipfile.ZipFile('backend/model.zip', 'r') as zip_ref:
+    with zipfile.ZipFile(f'{ROOT_DIR}/model.zip', 'r') as zip_ref:
         zip_ref.extractall('backend')
 
 # It loads a pickle file 
