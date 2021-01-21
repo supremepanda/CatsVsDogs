@@ -71,7 +71,7 @@ function UploadArea() {
 					</S.ResultWrapper>
 					:
 					<S.ResultWrapper>
-						<S.Result>Loading...</S.Result>
+						<S.Result><S.Loading /></S.Result>
 					</S.ResultWrapper>
 				}
 			</S.PreviewWrapper>

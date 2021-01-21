@@ -82,4 +82,18 @@ const Result = styled.h3`
 	color: var(--white);
 `
 
-export { UploadArea, UploadForm, Upload, Button, PreviewWrapper, Preview, ResultWrapper, Result }
+const Loading = styled.div`
+  border: 16px solid var(--white); 
+  border-top: 16px solid var(--primary);
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  animation: spin 2s linear infinite;
+
+	@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+	}
+`
+
+export { UploadArea, UploadForm, Upload, Button, PreviewWrapper, Preview, ResultWrapper, Result, Loading }
