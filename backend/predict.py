@@ -59,3 +59,5 @@ def predict_with_test_data():
     accuracy = model.score(features, labels)
 
     return accuracy
+
+#predict_with_test_data()

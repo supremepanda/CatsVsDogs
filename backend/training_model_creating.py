@@ -18,6 +18,7 @@ def pick_test_data():
 
     # Categories
     categories = [CATS, DOGS]
+    str_categories = ['cats', 'dogs']
 
     # Empty data array
     data = []
@@ -26,7 +27,7 @@ def pick_test_data():
     for category in categories:
 
         # Getting sub-directory path
-        path = os.path.join(directory, category)
+        path = os.path.join(directory, str_categories[category])
 
         # Setting label of image
         label = categories.index(category)
@@ -53,11 +54,13 @@ def pick_test_data():
 
 # It stores training data as pickle filetype.
 def pick_training_data():
+    print(ROOT_DIR)
     # The path of the images directory
     directory = f'{ROOT_DIR}/dataset'
 
     # The array of categories that these are 'cats' and 'dogs'
     categories = [CATS, DOGS]
+    str_categories = ['cats', 'dogs']
 
     # The initialization of empty data array
     data = []
@@ -66,7 +69,7 @@ def pick_training_data():
     for category in categories:
 
         # Getting sub-directory path
-        path = os.path.join(directory, category)
+        path = os.path.join(directory, str_categories[category])
 
         # Setting label of image
         label = categories.index(category)
@@ -116,4 +119,6 @@ def train_data():
     # Saving fitted model as 'model.sav'
     file_management.save_file('model.sav', model)
 
-
+#pick_training_data()
+#pick_test_data()
+#train_data()
