@@ -4,8 +4,10 @@ from sklearn.svm import SVC
 from PIL import Image
 import file_management
 
+# Constants
 CATS = 0
 DOGS = 1
+
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # It stores test data to get accuracy of our Support Vector Classifier
@@ -49,8 +51,8 @@ def pick_test_data():
     # Saving pre-proceed test data as 'test.pickle'
     file_management.save_file('test.pickle', data)      
 
-# It stores data as pickle filetype.
-def pick_all_data():
+# It stores training data as pickle filetype.
+def pick_training_data():
     # The path of the images directory
     directory = f'{ROOT_DIR}/dataset'
 
@@ -114,7 +116,4 @@ def train_data():
     # Saving fitted model as 'model.sav'
     file_management.save_file('model.sav', model)
 
-#pick_all_data()
-#train_data()
-#pick_test_data()
 

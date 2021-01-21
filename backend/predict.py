@@ -3,6 +3,7 @@ import numpy
 from PIL import Image
 import file_management
 
+# Constants
 CAT = 0
 DOG = 1
 
@@ -58,5 +59,3 @@ def predict_with_test_data():
     accuracy = model.score(features, labels)
 
     return accuracy
-
-#predict_with_test_data()
