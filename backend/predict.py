@@ -60,4 +60,10 @@ def predict_with_test_data():
 
     return accuracy
 
-#predict_with_test_data()
+
+# result = predict("backend/test-cat.png")
+
+# if (result == DOG):
+#     print("The given image is a Dog!")
+# else:
+#     print("The given image is a Cat!")

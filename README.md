@@ -26,6 +26,15 @@ That will run the Flask Api server.
 After ran API serevr succesfully, run
 `npm run start`
 
+## To run only `predict.py` instead of using web application
+
+If you want to run without using web application online or local. Just want to use script on command line interface.
+
+First go, `backend/predict.py` directory, then add an image that you want to test.
+
+After adding this image in `backend` folder, in `predict.py` comment out 64-69 lines and run
+`predict()` function to see magic.
+
 ## Team & Roles
 
 All contribituions is made together so than there is no meaning to split our code base as a roles or team.
