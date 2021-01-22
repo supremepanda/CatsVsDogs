@@ -8,3 +8,5 @@ yarn.lock
 backend/model.sav
 build/*
 model.sav
+react/build/*
+node_modules/*
