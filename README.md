@@ -14,7 +14,7 @@ The main goal of the project is that predicting the given image is cat or dog.
 To run our example local. There are two main things to do. First running the Flask Api then running the
 React web server. To do that first be sure Node.js is installed in your computer.
 
-If not [install here](#https://nodejs.org/en/) download it here.
+If not <a href="https://nodejs.org/en" target="_blank">click to download</a>.
 
 Then, in project folder, run
 `npm install`
