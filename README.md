@@ -50,24 +50,25 @@ Api folder for communicating between frontend and backend.
 
 ### Python
 
-Flask_Cors 3.0.10: To make request to api without crossorigin problem.  
-Flask 1.1.2: To create and deploy an API.  
-Numpy 1.19.5 To convert image to mathematical array.
-Pillow 8.1.0 To open and to manipulate images.
-Scikit_learn 0.24.1 To using Support Vector Machine algorithm.
+**Flask_Cors 3.0.10**: To make request to api without crossorigin problem.  
+**Flask 1.1.2**: To create and deploy an API.  
+**Numpy 1.19.5** To convert image to mathematical array.
+**Pillow 8.1.0** To open and to manipulate images.
+**Scikit_learn 0.24.1** To using Support Vector Machine algorithm.
 
 ## Javascript
 
-React: To build Progrssive Web App
-Redux: To handle app data on central place  
-Redux Saga: To handle asynchronous actions like API request
-Redux Sauce: To handle better and understandable with Saga pattern  
-Reselect: To handle data without side effects
-Styled Components: To handle styles better maintainable way when app grows
-Immer: To handle saving data to Redux more clear way
+**React**: To build Progrssive Web App
+**Redux**: To handle app data on central place  
+**Redux Saga**: To handle asynchronous actions like API request
+**Redux Sauce**: To handle better and understandable with Saga pattern  
+**Reselect**: To handle data without side effects
+**Styled Components**: To handle styles better maintainable way when app grows
+**Immer**: To handle saving data to Redux more clear way
 
-Entry file for backend is backend/predict.py.
-Entry file for frontend web application is
+Entry file for backend is `backend/predict.py`.
+
+Entry file for frontend web application is `src/index.js`
 
 ## Additional:
 
