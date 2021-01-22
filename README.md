@@ -32,8 +32,11 @@ All contribituions is made together so than there is no meaning to split our cod
 But if we have to split our code base roles, they are mostly like that;
 
 **Frontend:** Mehmet Pekcan
+
 **Backend:** Furkan Baldır
+
 **DevOps:** Mehmet Pekcan
+
 **Api:** Mehmet Pekcan
 
 ## Structure:
